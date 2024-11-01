@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gemini Model Inference</title>
+  </head>
+  <body>
+    <h2>Enter Text for Gemini Model Inference</h2>
+    
+    <!-- Input form -->
+    <form action="/inference" method="post">
+      <label for="input_text">Input Text:</label><br><br>
+      <textarea id="input_text" name="input_text" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <!-- Output box for the model's response -->
+    {% if model_response %}
+    <h3>Model Response:</h3>
+    <textarea id="output_text" rows="4" cols="50" readonly>{{ model_response }}</textarea>
+    {% endif %}
+    
+  </body>
+</html>
